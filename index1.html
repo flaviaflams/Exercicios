@@ -5,14 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Média Aprovação</title>
-    <script >
-
+    <script type="text/javascript">
+      let n1= document.getElementById('nt1').value;
+      let n2= document.getElementById('nt2').value;
+      let n3= document.getElementById('nt3').value;
+      let nome= document.getElementById('nome').value;
+      var media= function (n1,n2,n3){
+        return ((n1+n2+n3)/3);
+      }
+      function funcao1(){
+        alert =("Leu a função");
+        if (media >= 7) {
+          alert =("Parabéns "+ nome +" Você foi Aprovado! Aproveite suas férias!");
+        }
+        else{
+          alert =("você foi Reprovado!");
+        }
+    }
     </script>
   </head>
   <body>
-    <form>
+   
       <div>
-          <label for="nome">Nome:</label>
+          <label for="txtnome">Nome:</label>
           <input type="text" id="nome" />
       </div>
       <br>
@@ -33,8 +48,8 @@
       <br>
       <br>
       <div>
-          <input type="button" onclick="funcao1()" value="Enviar" />
+          <button type="button" onclick="funcao1()">Enviar</button>
       </div>
-    </form>
+   
   </body>
 </html>
