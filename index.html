@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <script type="text/javascript" src="js/index.js">
+  <script type="text/javascript">
     let n1= nt1;
     let n2= nt2;
     let n3= nt3;
@@ -8,15 +8,18 @@
     var media= function (n1,n2,n3){
       return ((n1+n2+n3)/3);
     }
-    funcao1(){
+    function funcao1(){
       if (media >= 7) {
-      alert =("Parabéns " + nome + " Você foi Aprovado! Aproveite suas férias!");
+        alert =("Parabéns "+ nome +" Você foi Aprovado! Aproveite suas férias!");
+      }
+      else{
+         alert =("você foi Reprovado!");
+      }
     }
-    
 
   </script>
   <body>
-    <form action="/pagina-processa-dados-do-form" target="_self" method="post">
+    <form>
       <div>
           <label for="nome">Nome:</label>
           <input type="text" id="nome" />
@@ -38,9 +41,8 @@
       </div>
       <br>
       <br>
-      <div class="button">
-          <button type="button">Enviar</button>
-          <input type="button" onclick="funcao1()" value="Exibir Alert" />
+      <div>
+          <input type="button" onclick="funcao1()" value="Enviar" />
       </div>
     </form>
   </body>
